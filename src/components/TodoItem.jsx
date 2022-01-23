@@ -1,8 +1,7 @@
-import React, { useContext } from "react";
-import { TodoContext } from "../container/Todo";
+import { useDispatch } from "react-redux";
 
 export const TodoItem = ({ todo, index }) => {
-  const { dispatch } = useContext(TodoContext);
+  const dispatch = useDispatch();
 
   return (
     <li>

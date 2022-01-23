@@ -1,8 +1,9 @@
-import React, { useContext } from "react";
-import { TodoContext } from "../container/Todo";
+import { useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 
 export const TodoInput = () => {
-  const { state, dispatch } = useContext(TodoContext);
+  const dispatch = useDispatch();
+  const state = useSelector((store) => store);
 
   return (
     <div>
