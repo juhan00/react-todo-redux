@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
-import { TodoFrameContext } from "./TodoFrame";
+import { TodoContext } from "../container/Todo";
 
 export const TodoInput = () => {
-  const { state, dispatch } = useContext(TodoFrameContext);
+  const { state, dispatch } = useContext(TodoContext);
 
   return (
     <div>

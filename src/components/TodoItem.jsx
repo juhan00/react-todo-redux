@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
-import { TodoFrameContext } from "./TodoFrame";
+import { TodoContext } from "../container/Todo";
 
 export const TodoItem = ({ todo, index }) => {
-  const { dispatch } = useContext(TodoFrameContext);
+  const { dispatch } = useContext(TodoContext);
 
   return (
     <li>

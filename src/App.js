@@ -1,14 +1,9 @@
-import { TodoFrame } from "./components/TodoFrame";
-import { TodoInput } from "./components/TodoInput";
-import { TodoList } from "./components/TodoList";
+import { Todo } from "./container/Todo";
 
 function App() {
   return (
     <div className="App">
-      <TodoFrame>
-        <TodoInput />
-        <TodoList />
-      </TodoFrame>
+      <Todo />
     </div>
   );
 }

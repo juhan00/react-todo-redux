@@ -1,9 +1,9 @@
 import React, { useContext } from "react";
 import { TodoItem } from "./TodoItem";
-import { TodoFrameContext } from "./TodoFrame";
+import { TodoContext } from "../container/Todo";
 
 export const TodoList = () => {
-  const { state } = useContext(TodoFrameContext);
+  const { state } = useContext(TodoContext);
 
   return (
     <ul>

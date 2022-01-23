@@ -1,6 +1,8 @@
 import React, { useReducer } from "react";
+import { TodoInput } from "../components/TodoInput";
+import { TodoList } from "../components/TodoList";
 
-export const TodoFrameContext = React.createContext();
+export const TodoContext = React.createContext();
 
 const initialTodos = {
   todos: [
@@ -113,12 +115,13 @@ const reducer = (state, action) => {
   }
 };
 
-export const TodoFrame = (props) => {
+export const Todo = (props) => {
   const [state, dispatch] = useReducer(reducer, initialTodos);
 
   return (
-    <TodoFrameContext.Provider value={{ state, dispatch }}>
-      {props.children}
-    </TodoFrameContext.Provider>
+    <TodoContext.Provider value={{ state, dispatch }}>
+      <TodoInput />
+      <TodoList />
+    </TodoContext.Provider>
   );
 };
